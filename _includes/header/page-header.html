@@ -1,0 +1,21 @@
+{% include header/page-header-bg.html %}
+
+<header class="page-header">
+    {% include nav/navbar.html %}
+
+    <div class="page-header-content">
+        <div class="container">
+            <div class="hide-on-med-and-down">
+                <h1>{{ site.title }}</h1>
+                <h3>{{ site.tagline }}</h3>
+            </div>
+
+            <div class="hide-on-large-only">
+                <h3>{{ site.title }}</h3>
+                <h5>{{ site.tagline }}</h5>
+            </div>
+
+            {% include cta.html %}
+        </div>
+    </div>
+</header>

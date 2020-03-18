@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ivo Zinenda">
+    
+    {% seo %}
+
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <style>
+        {% capture include_to_scssify %}
+            {% include style.scss %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+    </style>
+    
+    <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" async defer></script>
+    <script src="https://kit.fontawesome.com/bcb9860f45.js " crossorigin="anonymous" async defer></script>
+</head>

@@ -1,0 +1,34 @@
+<nav class="nav-extended transparent">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo left" title="Logotipo da {{ site.title }}">
+            {% include nav/prostudio-white-logo.svg %} {{ site.title }}
+        </a>
+
+        <a href="#" data-target="sideNav" class="sidenav-trigger">
+            <i class="fas fa-lg fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+            {% include nav/nav.html %}
+
+            <li>
+                <a title="Contacte-nos" href="#contactos" class="btn-large waves-effect waves-light modal-trigger">Contacte-nos <i class="fas fa-mail-bulk"></i></a>
+            </li>
+        </ul>
+
+        <ul id="sideNav" class="side-nav">
+            {% for item in site.data.nav %}
+                <li>
+                    <a href="{% if page.layout == "default" %}/{% endif %}{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
+                </li>
+                {% unless forloop.last %}<hr>{% endunless %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="nav-content">
+        <button title="Contacte-nos" data-target="contactos" class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light modal-trigger">
+            <i class="fas fa-lg fa-mail-bulk"></i>
+        </button>
+    </div>
+</nav>

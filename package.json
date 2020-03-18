@@ -1,0 +1,13 @@
+{
+  "name": "PROSTUDIOMOZ",
+  "version": "1.0.0",
+  "description": "Fotografias e Videos",
+  "main": "index.js",
+  "repository": "https://github.com/Zinenda/prostudiomoz.git",
+  "author": "Ivo Zinenda <izinenda@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}

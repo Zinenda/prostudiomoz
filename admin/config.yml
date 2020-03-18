@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: 'assets/img/uploads'
+
+site_url: https://prostudiomoz.com
+display_url: https://prostudiomoz.com
+
+logo_url: https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg
+
+collections:
+  - label: "Imagem de Background"
+    name: "covers"
+    create: true
+    folder: "collection/_covers"
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem de capa", name: "image", widget: "image"}
+  
+  - label: "Sobre"
+    name: "sobre"
+    create: true
+    folder: "collection/_sobre"
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Icones", name: "icons", widget: "select", options: ["info", "dot-circle", "check-double", "crosshairs"]}
+      - {label: "Descrição", name: "body", widget: "markdown"}
+
+  - label: "Serviços"
+    name: "servicos"
+    create: true
+    folder: "collections/_servicos"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Serviço", name: "title", widget: "string"}
+      - {label: "Imagem de capa", name: "image", widget: "image"}
+
+  - label: "Galeria"
+    name: "galeria"
+    create: true
+    folder: "collections/_galeria"
+    fields:
+      - {label: "Nome da Foto", name: "title", widget: "string"}
+      - {label: "Foto", name: "photo", widget: "image"}
+      - {label: "Retrato", name: "potrait", widget: "boolean"}
+      - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos"]}
