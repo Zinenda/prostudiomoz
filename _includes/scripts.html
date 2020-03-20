@@ -2,3 +2,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 {% include aos.html %}
 <script src="/assets/js/lazyloading.js"></script>
+
+{% if page.layout == "default" %}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endif %}
