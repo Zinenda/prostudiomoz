@@ -43,5 +43,5 @@ collections:
     fields:
       - {label: "Nome da Foto", name: "title", widget: "string"}
       - {label: "Foto", name: "photo", widget: "image"}
-      - {label: "Retrato", name: "potrait", widget: "boolean"}
+      - {label: "Retrato", name: "potrait", widget: "boolean", required: false}
       - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos"]}
