@@ -13,6 +13,7 @@ plugins:
 
 collections_dir: collections
 collections:
+  covers:
   sobre:
   servicos:
     output: true

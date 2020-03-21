@@ -21,26 +21,24 @@
 
 <section id="servicos" class="section scrollspy">
     <div class="row">
-        <div class="container">
-            <div class="col s12 l4">
-                <h2 class="hide-on-med-and-down" style="padding-top: 50px;" data-aos="slide-up" data-aos-duration="3000">Nossos Serviços</h2>
+        <div class="col s12 l4">
+            <h4 class="hide-on-med-and-down" style="padding-top: 50px;" data-aos="slide-up" data-aos-duration="3000">Conheça Nossos Serviços</h4>
 
-                <h4 class="hide-on-large-only">Nossos Serviços</h4>
-            </div>
-    
-            <div class="col s12 l8">
-                <section class="section-grid">
-                        {% for item in site.servicos %}
-                            <div class="servicos-container center" data-aos="zoom-in" data-aos-duration="3000">
-                                <img data-src="{{ item.main-image }}?nf_resize=fit&w=300" alt="{{ item.title }}" class="lazy">
-                                <div class="text">
-                                    <h5>{{ item.title }}</h5>
-                                    <a href="{{ item.url }}" class="btn waves-effect waves-light white-text">Veja Mais</a>
-                                </div>
+            <h4 class="hide-on-large-only">Conheça Nossos Serviços</h4>
+        </div>
+
+        <div class="col s12 l8">
+            <section class="section-grid">
+                    {% for item in site.servicos %}
+                        <div class="servicos-container center" data-aos="zoom-in" data-aos-duration="3000">
+                            <img data-src="{{ item.main-image }}?nf_resize=fit&w=300" alt="{{ item.title }}" class="lazy">
+                            <div class="text">
+                                <h5>{{ item.title }}</h5>
+                                <a href="{{ item.url }}" class="btn waves-effect waves-light white-text">Veja Mais</a>
                             </div>
-                        {% endfor %}
-                </section>
-            </div>
+                        </div>
+                    {% endfor %}
+            </section>
         </div>
     </div>
 </section>

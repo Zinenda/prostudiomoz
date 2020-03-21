@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.srcset = lazyImage.dataset.srcset;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
+// Code By Webdevtrick ( https://webdevtrick.com )
+(function() {
+	var elements = document.querySelectorAll('img[data-src]');
+	var index = 0;
+	var lazyLoad = function() {	
+		if(index >= elements.length) return;
+		var item = elements[index];	
+		if((this.scrollY + this.innerHeight) > item.offsetTop) {			
+			var src = item.getAttribute("data-src");
+			item.src = src;
+			item.addEventListener('load', function() {
+				item.removeAttribute('data-src');    	 
+			});     	
+			index++;
+			lazyLoad();
+		}
+	};
+	var init = function() {
+		window.addEventListener('scroll', lazyLoad);
+		lazyLoad();
+	};
+	return init();
+})();

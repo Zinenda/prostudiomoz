@@ -1,7 +1,7 @@
 <nav class="nav-extended transparent">
     <div class="nav-wrapper">
-        <a href="/" class="brand-logo left" title="Logotipo da {{ site.title }}">
-            {% include nav/prostudio-white-logo.svg %} {{ site.title }}
+        <a href="/" class="brand-logo" title="Logotipo da {{ site.title }}">
+            {% include nav/prostudio-white-logo.svg %} <span class="hide-on-med-and-down">{{ site.title }}</span>
         </a>
 
         <a href="#" data-target="sideNav" class="sidenav-trigger">
@@ -16,7 +16,7 @@
             </li>
         </ul>
 
-        <ul id="sideNav" class="side-nav">
+        <ul id="sideNav" class="sidenav black">
             {% for item in site.data.nav %}
                 <li>
                     <a href="{% if page.layout == "default" %}/{% endif %}{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
@@ -26,7 +26,7 @@
         </ul>
     </div>
 
-    <div class="nav-content">
+    <div class="nav-content hide-on-large-only">
         <button title="Contacte-nos" data-target="contactos" class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light modal-trigger">
             <i class="fas fa-lg fa-mail-bulk"></i>
         </button>

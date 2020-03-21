@@ -13,7 +13,7 @@ collections:
   - label: "Imagem de Background"
     name: "covers"
     create: true
-    folder: "collection/_covers"
+    folder: "collections/_covers"
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Imagem de capa", name: "image", widget: "image"}
@@ -21,7 +21,7 @@ collections:
   - label: "Sobre"
     name: "sobre"
     create: true
-    folder: "collection/_sobre"
+    folder: "collections/_sobre"
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Icones", name: "icons", widget: "select", options: ["info", "dot-circle", "check-double", "crosshairs"]}
