@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Booking
-image: 'https://ucarecdn.com/e851f93d-429c-492f-ae31-4a427508be0a/'
+image: /assets/img/uploads/mg_2338.jpg
+pagination:
+  category: Booking
 ---
-
