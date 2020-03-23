@@ -22,9 +22,9 @@
 <section id="servicos" class="section scrollspy">
     <div class="row">
         <div class="col s12 l4">
-            <h4 class="hide-on-med-and-down" style="padding-top: 50px;" data-aos="slide-up" data-aos-duration="3000">Conheça Nossos Serviços</h4>
+            <h4 class="hide-on-med-and-down" style="padding-top: 100px;" data-aos="slide-up" data-aos-duration="3000">Conheça Nossos Serviços</h4>
 
-            <h4 class="hide-on-large-only">Conheça Nossos Serviços</h4>
+            <h4 class="hide-on-large-only center">Conheça Nossos Serviços</h4>
         </div>
 
         <div class="col s12 l8">
@@ -34,7 +34,7 @@
                             <img data-src="{{ item.image }}?nf_resize=fit&w=300" alt="{{ item.title }}" class="lazy">
                             <div class="text">
                                 <h5>{{ item.title }}</h5>
-                                <a href="{{ item.url }}" class="btn waves-effect waves-light white-text">Veja Mais</a>
+                                <a href="{{ item.title | downcase }}/" class="btn waves-effect waves-light white-text">Veja Mais</a>
                             </div>
                         </div>
                     {% endfor %}
