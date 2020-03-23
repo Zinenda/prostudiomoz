@@ -39,7 +39,7 @@ collections:
         name: "pagination"
         widget: "object"
         fields:
-          - {label: "Ativação", name: "enabled", default: true, widget: "hidden"}
+          - {label: "Ativação", name: "enabled", default: true, widget: "boolean"}
           - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos", "Diversos"]}
 
   - label: "Galeria"

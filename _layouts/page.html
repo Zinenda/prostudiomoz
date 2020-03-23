@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
-<!--
-    {% include masonry.html %}
 
-    <section class="section">
-        <div class="masonry">
-            {% for item in paginator.posts %}
-                <img data-src="{{ item.photo }}?nf_resize=smartcrop&{% unless item.potrait %}w=320{% else %}h=320{% endunless %}" data-srcset="{{ item.photo }}?nf_resize=smartcrop&{% unless item.potrait %}w=720{% else %}h=720{% endunless %} 2x" alt="{{ item.title }}" class="item lazy materialboxed">
-            {% endfor %}
-        </div>
-    </section>
--->
+{% include pages/masonry.html %}
+
+<section class="section">
+    <div class="masonry">
+        {% for item in paginator.posts %}
+            <img data-aos="zoom-in" data-aos-duration="3000" data-src="{{ item.photo }}?nf_resize=smartcrop&{% unless item.potrait %}w=320{% else %}h=320{% endunless %}" data-srcset="{{ item.photo }}?nf_resize=smartcrop&{% unless item.potrait %}w=720{% else %}h=720{% endunless %} 2x" alt="{{ item.title }}" class="item lazy materialboxed">
+        {% endfor %}
+    </div>
+
+    {% include pages/pagination.html %}
+</section>

@@ -1,3 +1,7 @@
 <div class="center">
-    <a href="#main-content" class="btn-large waves-effect waves-light">Conheça-nos</a>
+    {% if page.layout == "page" %}
+        <a href="#main-content" class="btn-large waves-effect waves-light">Aprecie Mais</a>
+        {% else %}
+            <a href="#main-content" class="btn-large waves-effect waves-light">Conheça-nos</a>
+    {% endif %}
 </div>

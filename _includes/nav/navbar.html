@@ -1,29 +1,31 @@
 <nav class="nav-extended transparent">
     <div class="nav-wrapper">
-        <a href="/" class="brand-logo" title="Logotipo da {{ site.title }}">
-            {% include nav/prostudio-white-logo.svg %} <span class="hide-on-med-and-down">{{ site.title }}</span>
-        </a>
-
-        <a href="#" data-target="sideNav" class="sidenav-trigger">
-            <i class="fas fa-lg fa-bars"></i>
-        </a>
-
-        <ul class="right hide-on-med-and-down">
-            {% include nav/nav.html %}
-
-            <li>
-                <a title="Contacte-nos" href="#contactos" class="btn-large waves-effect waves-light modal-trigger">Contacte-nos <i class="fas fa-mail-bulk"></i></a>
-            </li>
-        </ul>
-
-        <ul id="sideNav" class="sidenav black">
-            {% for item in site.data.nav %}
+        <div class="container">
+            <a href="/" class="brand-logo" title="Logotipo da {{ site.title }}">
+                {% include nav/prostudio-white-logo.svg %} <span class="hide-on-med-and-down">{{ site.title }}</span>
+            </a>
+    
+            <a href="#" data-target="sideNav" class="sidenav-trigger">
+                <i class="fas fa-lg fa-bars"></i>
+            </a>
+    
+            <ul class="right hide-on-med-and-down">
+                {% include nav/nav.html %}
+    
                 <li>
-                    <a href="{% if page.layout == "default" %}/{% endif %}{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
+                    <a title="Contacte-nos" href="#contactos" class="btn-large waves-effect waves-light modal-trigger">Contacte-nos <i class="fas fa-mail-bulk"></i></a>
                 </li>
-                {% unless forloop.last %}<hr>{% endunless %}
-            {% endfor %}
-        </ul>
+            </ul>
+    
+            <ul id="sideNav" class="sidenav black">
+                {% for item in site.data.nav %}
+                    <li>
+                        <a href="{% if page.layout == "default" %}/{% endif %}{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
+                    </li>
+                    {% unless forloop.last %}<hr>{% endunless %}
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
     <div class="nav-content hide-on-large-only">
