@@ -31,7 +31,7 @@
             <section class="section-grid">
                     {% for item in site.servicos %}
                         <div class="servicos-container center" data-aos="zoom-in" data-aos-duration="3000">
-                            <img data-src="{{ item.main-image }}?nf_resize=fit&w=300" alt="{{ item.title }}" class="lazy">
+                            <img data-src="{{ item.image }}?nf_resize=fit&w=300" alt="{{ item.title }}" class="lazy">
                             <div class="text">
                                 <h5>{{ item.title }}</h5>
                                 <a href="{{ item.url }}" class="btn waves-effect waves-light white-text">Veja Mais</a>

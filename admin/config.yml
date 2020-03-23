@@ -35,6 +35,12 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Serviço", name: "title", widget: "string"}
       - {label: "Imagem de capa", name: "image", widget: "image"}
+      - label: "Paginação"
+        name: "pagination"
+        widget: "object"
+        fields:
+          - {label: "Ativação", name: "enabled", default: true, widget: "hidden"}
+          - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos", "Diversos"]}
 
   - label: "Galeria"
     name: "galeria"
@@ -44,4 +50,4 @@ collections:
       - {label: "Nome da Foto", name: "title", widget: "string"}
       - {label: "Foto", name: "photo", widget: "image"}
       - {label: "Retrato", name: "potrait", widget: "boolean", required: false}
-      - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos"]}
+      - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos", "Diversos"]}
