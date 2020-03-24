@@ -1,8 +1,8 @@
 {% unless page.layout == "page" %}
     {% for item in site.data.nav %}
-    <li>
-        <a href="{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
-    </li>
+        <li>
+            <a href="{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
+        </li>
     {% endfor %}
 
     {% else %}
@@ -10,8 +10,9 @@
             <li>
                 <a href="/{{ item.title | downcase }}/" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
             </li>
-            <li>
-                <a href="/galeria/" class="waves-effect waves-light white-text" title="Galeria">Galeria</a>
-            </li>
         {% endfor %}
+        
+        <li>
+            <a href="/galeria/" class="waves-effect waves-light white-text" title="Galeria">Galeria</a>
+        </li>
 {% endunless %}

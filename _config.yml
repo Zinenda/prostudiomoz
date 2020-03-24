@@ -16,7 +16,6 @@ collections:
   covers:
   sobre:
   servicos:
-    output: true
   galeria:
 
 # Pagination Settings
@@ -37,8 +36,6 @@ pagination:
 sass:
   sass_dir: assets/_sass
   style: compressed
-
-image: 
 
 # Exclude from processing.
 # The following items will not be processed, by default.

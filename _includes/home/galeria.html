@@ -8,7 +8,7 @@
 
         <div class="col s12 l8">
             <div class="section-grid">
-                {% for item in site.galeria reversed limit: 4 %}
+                {% for item in site.galeria reversed limit: 6 %}
                     {% unless item.potrait %}
                         <img data-src="{{ item.photo }}" alt="{{ item.title }}" data-caption="{{ item.title }}" class="lazy materialboxed" data-aos="zoom-in" data-aos-duration="3000">
                     {% endunless %}

@@ -35,12 +35,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Serviço", name: "title", widget: "string"}
       - {label: "Imagem de capa", name: "image", widget: "image"}
-      - label: "Paginação"
-        name: "pagination"
-        widget: "object"
-        fields:
-          - {label: "Ativação", name: "enabled", default: true, widget: "boolean"}
-          - {label: "Categoria", name: "category", widget: "select", options: ["Booking", "Casamentos", "Festas", "Publicidades", "Corporativos", "Diversos"]}
 
   - label: "Galeria"
     name: "galeria"
