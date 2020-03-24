@@ -9,13 +9,13 @@
     {% for item in site.covers limit: 1 %}
         <style>
             .page-header {
-                background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ item.image }}?nf_resize=smartcrop&h=640);
+                background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ item.image }}?nf_resize=fit&h=640);
             }
 
             /* Small devices (portrait tablets and large phones, 600px and up) */
             @media only screen and (min-width: 600px) {
                 .page-header {
-                    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ item.image }}?nf_resize=smartcrop&h=768);
+                    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ item.image }}?nf_resize=fit&h=768);
                 }
             }
 
@@ -48,13 +48,13 @@
         {% elsif page.layout == "page" %}
             <style>
                 .page-header {
-                    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ page.image }}?nf_resize=smartcrop&h=640);
+                    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ page.image }}?nf_resize=fit&h=640);
                 }
 
                 /* Small devices (portrait tablets and large phones, 600px and up) */
                 @media only screen and (min-width: 600px) {
                     .page-header {
-                        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ page.image }}?nf_resize=smartcrop&h=768);
+                        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ page.image }}?nf_resize=fit&h=768);
                     }
                 }
 
