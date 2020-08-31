@@ -20,6 +20,14 @@ main {
 footer {
     margin: 0;
 }
+nav {
+    a.brand-logo {
+        svg {
+            height: 60px;
+            padding-top: 1rem;
+        }
+    }
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
@@ -37,17 +45,6 @@ img {
 
 .underline {
     text-decoration: underline;
-}
-
-nav {
-    .nav-wrapper {
-        a.brand-logo {
-            svg {
-                height: 40px;
-                padding-top: 10px;
-            }
-        }
-    }
 }
 
 .text-justified {
