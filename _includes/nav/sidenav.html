@@ -1,0 +1,14 @@
+<aside id="sideNav" class="sidenav black">
+    <a href="/">{% include nav/prostudio-white-logo.svg %}</a>
+
+    <div class="divider"></div>
+
+    <ul>
+        {% for item in site.data.nav %}
+            <li>
+                <a href="{% if page.layout == "default" %}/{% endif %}{{ item.url }}" class="waves-effect waves-light white-text" title="{{ item.title }}">{{ item.title }}</a> 
+            </li>
+            {% unless forloop.last %}<hr>{% endunless %}
+        {% endfor %}
+    </ul>
+</aside>
